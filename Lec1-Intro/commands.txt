@@ -3,3 +3,6 @@
 | `npm i -g nodemon` | Install Nodemon globally                    |
 | `nodemon file.js`  | Run file + automatically restart on changes |
 | `npm init`         | Create `package.json` for your project      |
+
+
+npm init -y creates a new Node.js project by generating a package.json file with default values, without asking you any questions.
