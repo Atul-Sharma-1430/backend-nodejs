@@ -1,0 +1,9 @@
+Hello My name is Atul sharma and i am learning Node Js and this file is created to learn the concept of file handling
+This content is been appended using appendFile function
+This content is been appended using appendFile function
+This content is been appended using appendFile function
+This content is been appended using appendFile function
+This content is been appended using appendFile function
+This content is been appended using appendFile function
+This content is been appended using appendFile function
+This content is been appended using appendFile function
