@@ -1,0 +1,5 @@
+| Command            | Purpose                                     |
+| ------------------ | ------------------------------------------- |
+| `npm i -g nodemon` | Install Nodemon globally                    |
+| `nodemon file.js`  | Run file + automatically restart on changes |
+| `npm init`         | Create `package.json` for your project      |
