@@ -1,0 +1,5 @@
+npm i express 
+--> Installs Express as a dependency in the project
+--> Creates the node_modules folder, where Express and its dependencies are stored
+--> Creates/updates package-lock.json, which stores the exact dependency versions and the dependency tree
+--> Adds Express to the "dependencies" section of package.json
