@@ -1,0 +1,48 @@
+<!-- EJS ek template engine hai jo Express ke saath use hota hai, jisse hum server se aane wale dynamic data ko HTML mein show kar sakte hain. -->
+<!-- Simple: HTML → mostly static content, EJS → dynamic data + HTML. -->
+
+<!-- 
+HTML + JS ==> HTML me bhi dynamic data show kr skte hain but usme humko script tag me getElemByID krke usko change krna hoga
+-->
+
+<!-- 
+EJS ==> EJS me mai simply wahi js ko html ke andar likh skta hu jisko yaha pe ejs syntax template bolte hain Normal JS nhi
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS setup</title>
+    <!-- Yaha pe mai css ko dusre file me rakhta hu toh css apply nhi ho rha hai. iska reason next lect me -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- Isliye abhi ye use kr rhe hain -->
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>We are learning EJS</h1>
+    <!-- Ye vo name hai jo maine pass kiya tha isko yaha pe aise likhenge show krne ke liye -->
+    <h1>My name is <%=name%></h1>
+    <!-- Ye jo maine array bheja tha usko print kiya -->
+    <ul>
+      <li><%=prod[0].title%> : <%=prod[0].price%></li>
+      <li><%=prod[1].title%> : <%=prod[1].price%></li>
+      <li><%=prod[2].title%> : <%=prod[2].price%></li>
+    </ul>
+
+    <!-- Ye jo maine array bheja tha usko print kiya loop use krke -->
+    <ul>
+        <!-- JavaScript/EJS logic execute karne ke liye toh us time (=) ye use nhi krenge-->
+        <% prod.forEach((obj) => { %>
+            <!-- Values ko HTML me print krne ke liye <%= %> -->
+            <li><%=obj.title %> : <%=obj.price %></li>
+        <% }) %>
+    </ul>
+  </body>
+</html>

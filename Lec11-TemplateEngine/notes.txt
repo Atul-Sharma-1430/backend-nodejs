@@ -1,0 +1,3 @@
+Template engine :- Template engine ka use karke hum HTML ke andar server-side dynamic data ko easily show kar sakte hain.
+
+EJS :- EJS ki help se hum HTML file ke andar JavaScript ka dynamic data use karke HTML generate kar sakte hain.
