@@ -1,0 +1,14 @@
+EJS mein CSS directly likhne ki problem nahi hai. Problem tab hoti hai jab CSS ek separate file mein ho aur Express ko pata na ho ki us static file ko serve kahan se karna hai. Isliye express.static() middleware use karte hain, jo public folder ki CSS, JS, images etc. ko browser ke liye accessible bana deta hai.
+
+app.use(express.static("public")); // Yaha pe apne folder ka name dena hai but generally static cheeze public me rakha jata hai and ye by defaut public hota h
+
+"Agar browser CSS, JS, image etc. maange, toh public folder se provide karna."
+
+
+app.set("view engine", "ejs")
+        ↓
+EJS files ko render karna
+
+app.use(express.static("public"))
+        ↓
+CSS / JS / Images ko serve karna
