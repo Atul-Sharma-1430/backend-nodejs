@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Form Handling in express Js</h1>
+
+    <!-- Aise Normal form jab bnate hain tab jab submit krte hain toh us time humari value uper URL me dikhne lagti hai jo ki accha nhi h kyuki privacy issue isliye hum ek middleWare ka use krenge urlencoded-->
+
+    <!-- Ab jab user submit krega toh us time data url me nhi jaayega instead vo ye wale route pe jaayega jo humney server.js me likha hai -->
+    <form action="/form-submit" method="post">
+      name :            <!--ye name will be the key in json-->
+      <input type="text" name="Name" placeholder="Enter Your Name" />
+
+      <br /><br />
+      email :
+      <input type="email" name="Email" placeholder="Enter Your Email-id" />
+
+      <br /><br />
+      pass:
+      <input
+        type="password"
+        placeholder="Enter Your Password Here"
+        name="Password"
+      />
+
+      <br /><br />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
