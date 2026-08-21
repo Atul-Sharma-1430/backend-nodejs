@@ -13,7 +13,7 @@ console.log("Connecting MongoDB with ExpressJS");
 mongoose
   .connect(
     process.env.MONGO_URI,
-    { dbName: "NodeJs Mastery Course" }, // ye db name humko manually dena hota hai jo compass me dikhega
+    { dbName: "NodeJs_Mastery_Course" }, // ye db name humko manually dena hota hai jo compass me dikhega and ye spaces nhi dena hai isme
   )
   .then(() => console.log("MongoDB connected")) // ye jab databse se connect ho jaayega toh ye message display hoga
   .catch((e) => console.log("Error : ", e)); // agar kuch error aaya toh ye error message display krega
