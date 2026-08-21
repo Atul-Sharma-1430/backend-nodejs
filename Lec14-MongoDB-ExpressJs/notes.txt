@@ -1,0 +1,9 @@
+Mongo Db Is connected to Express using Mongoose
+
+Mongoose ek Node.js library hai jo Node.js/Express application ko MongoDB ke saath easily communicate karne mein help karti hai.
+
+
+command : npm install/i mongoose
+
+
+to use env function we need  to install dotenv using :: npm install dotenv
