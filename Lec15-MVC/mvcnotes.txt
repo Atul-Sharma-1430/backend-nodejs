@@ -1,0 +1,5 @@
+Ye ek software architecture/design pattern hai jo code ko alag-alag parts mein organize karta hai, taaki project clean aur manageable rahe.
+
+Model       → Data/Database ka kaam
+View        → User ko kya dikhana hai
+Controller  → Request aane par kya karna hai
