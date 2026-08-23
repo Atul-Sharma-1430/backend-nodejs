@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* Dark gradient background */
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main container */
+.container {
+  width: 500px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* Heading */
+.h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* URL input */
+#url-input {
+  width: 90%;
+  padding: 14px 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+#url-input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.25);
+}
+
+/* Main submit button */
+form button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.35);
+}
+
+/* Short URL section */
+.short-url {
+  margin-top: 25px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f5f5ff;
+  border-radius: 10px;
+  border: 1px solid #e0e0ff;
+}
+
+/* Short URL link */
+.short-url a {
+  color: #2575fc;
+  text-decoration: none;
+  word-break: break-all;
+  font-weight: 500;
+}
+
+.short-url a:hover {
+  text-decoration: underline;
+}
+
+/* Copy button */
+.short-url button {
+  position: relative;
+  padding: 10px 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.short-url button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.35);
+}
+
+/* Copy tooltip */
+.short-url button #message {
+  display: none;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: #222;
+  color: white;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin: 0;
+}
+
+.short-url button:hover #message {
+  display: block;
+}
+
+/* Tooltip arrow */
+.short-url button #message::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #222;
+}
+
+/* General buttons */
+button {
+  cursor: pointer;
+}
+
+/* Paragraph */
+p {
+  margin-top: 20px;
+  font-size: 16px;
+}
