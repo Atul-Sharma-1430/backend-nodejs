@@ -1,0 +1,28 @@
+Cloudinary ===> npm i cloudinary
+
+Cloudinary ek cloud-based service hai jisme hum images, videos aur other media files ko upload aur store kar sakte hain.
+Ye uploaded files ko optimize karke unka URL bhi provide karta hai, jise hum apne application aur database mein use kar sakte hain.
+
+Simple Example:
+Image → Cloudinary → Image URL → MongoDB
+
+Basically:
+Cloudinary = Images/Videos ko cloud mein store aur manage karne ki service.
+
+
+nmp i multer
+Multer ek Node.js/Express middleware hai jo multipart/form-data ke through aane wali files ko handle karta hai.
+
+
+Program Flow:
+Jaise hi main upload click karta hoon, POST /upload request aati hai. Us request ke beech mein Multer middleware file ko receive karta hai aur mere defined storage rules ke according uska filename set karta hai. Phir Multer file ki information req.file mein deta hai. POST handler req.file.path lekar us file ko Cloudinary par upload karta hai. Cloudinary se mile secure_url aur public_id ko MongoDB mein save kar deta hai
+
+
+Multer
+→ File receive + handle
+
+Cloudinary
+→ File ko cloud mein store
+
+MongoDB
+→ File ki details/URL save
