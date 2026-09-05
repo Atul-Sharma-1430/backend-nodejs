@@ -131,6 +131,11 @@ app.post("/register", upload.single("myFile"), async (req, res) => {
   res.redirect("/");
 });
 
+// ye Error page ke liye route
+app.get("/invalidCredentials", (req, res) => {
+  res.render("invalidCredentials.ejs");
+});
+
 // ==================== JAB USER LOGIN KREGA TOH KYA HONA CHAHIYE ====================
 app.post("/login", async (req, res) => {
   // pahle jo user ne login krne ke liye email pass daala vo nikal lenge
@@ -142,17 +147,19 @@ app.post("/login", async (req, res) => {
 
   // agar user exist nhi krta hai toh hum error page ko render kr rhe hain
   if (!user) {
-    res.render("invalidCredentials.ejs");
+    // yaha maine directly render ke badle usko ek dusre route ke through dikha rha hu taaki url ka endpoint bhi change ho accordingly
+    return res.redirect("/invalidCredentials");
   }
 
   // agar user mil gya but usne jo pass daala hai vo galat daala hai toh bhi error page render kr denge
   else if (user.password != password) {
-    res.render("invalidCredentials.ejs");
+    // yaha maine directly render ke badle usko ek dusre route ke through dikha rha hu taaki url ka endpoint bhi change ho accordingly
+    return res.redirect("/invalidCredentials");
   }
 
   // agar user mil gya means gmail sahi hai and password bhi match ho gya toh uska profile dikha do ans user jo object nikla toh usko bhi bhej denge tabhi ejs file me JS wala code likh payenge
   else {
-    res.render("profile.ejs", { user });
+    return res.render("profile.ejs", { user });
   }
 });
 
