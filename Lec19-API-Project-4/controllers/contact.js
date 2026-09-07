@@ -1,8 +1,26 @@
 import { Contact } from "../models/Contact.js";
 
+// ==================== GETTING CONTACT BY ID ====================
+export const getContactByID = async (req, res) => {
+  const id = req.params.id;
+
+  const userContact = await Contact.findById(id);
+
+  if (!userContact) {
+    return res.json({ message: "Contact Not found", success: false });
+  }
+
+  res.json({
+    message: "Contact Fetched",
+    userContact,
+    success: true,
+  });
+};
+
 // ==================== GETTING ALL CONTACT ====================
 export const getAllContact = async (req, res) => {
   const userContact = await Contact.find();
+
   if (!userContact) {
     return res.json({ message: "Contact Not found", success: false });
   }
@@ -10,6 +28,7 @@ export const getAllContact = async (req, res) => {
   res.json({
     message: "All Contact Fetched",
     userContact,
+    success: true,
   });
 };
 
