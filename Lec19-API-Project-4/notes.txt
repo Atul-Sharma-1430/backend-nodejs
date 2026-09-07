@@ -1,0 +1,33 @@
+An API is an interface that allows two different software applications to communicate with each other and exchange data or services.
+
+API ke common HTTP methods
+Method || Kaam
+GET	---- Data lena
+POST ---- Naya data banana
+PUT	---- Existing data update karna
+PATCH ---- Existing data ka partial update
+DELETE ----	Data delete karna
+
+
+
+================== Rest API ==================
+REST API –--- HTTP methods (GET, POST, PUT, DELETE) use karti hai. Most common.
+SOAP API –--- XML-based protocol, structured/strict communication ke liye.
+GraphQL API –--- Client exactly wahi data request kar sakta hai jo usse chahiye.
+WebSocket API –--- Real-time, two-way communication ke liye, jaise chat/live updates.
+
+APIs can be classified as REST, SOAP, GraphQL, and WebSocket APIs.
+
+
+================== bcryptJS : npm i bcryptjs  ==================
+not npm i bcrypt - ye alag hai
+since hum password ko agar directly save krte hain dbs me toh co accha nhi maana jaata kyuki agar koi dbs hack kr liya toh leak ho jaayega sab isliye hum usko hashcode ke form me rakhenge isliye hum bcryptJs inbuilt hai usko use krenge 
+
+
+
+================== jwt token : npm i jsonwebtoken ==================
+JWT (JSON Web Token) ek token hota hai jo mainly user authentication ke liye use hota hai.
+
+JWT ek digital ID card jaisa hai jo server ko batata hai ki user successfully login kar chuka hai.
+
+“Jab user login karega, backend ek JWT token generate karega jo user ki identity ko represent karega. Is token ko use karke future requests mein server user ko identify kar lega, isliye user ko baar-baar login karne ki zarurat nahi padegi.”
