@@ -9,8 +9,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import userRouter from "./routes/userRouter.js";
+import contactRouter from "./routes/contactRouter.js";
 
 const app = express();
+
 // ==================== BODY PARSER MIDDLEWARE ====================
 app.use(bodyParser.json());
 
@@ -26,6 +28,10 @@ mongoose
 // user ki jitni bhi cheeze hongi sab is route pe hit hongi and then iska endpoint routes wale folder me se select ho jaayega jiske liye bhi call hoga
 // yaha pe app.use  use krenge bcz routes wala folder ek middleware ki trh act krega
 app.use("/api/user", userRouter);
+
+// ==================== CONTACT ROUTE ====================
+// contact ki jitni bhi cheeze hongi sab is route pe hit hongi and then iska endpoint routes wale folder me se select ho jaayega jiske liye bhi call hoga
+app.use("/api/contact", contactRouter);
 
 // ==================== HOME ROUTE ====================
 app.get("/", (req, res) => {

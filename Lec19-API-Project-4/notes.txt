@@ -31,3 +31,7 @@ JWT (JSON Web Token) ek token hota hai jo mainly user authentication ke liye use
 JWT ek digital ID card jaisa hai jo server ko batata hai ki user successfully login kar chuka hai.
 
 “Jab user login karega, backend ek JWT token generate karega jo user ki identity ko represent karega. Is token ko use karke future requests mein server user ko identify kar lega, isliye user ko baar-baar login karne ki zarurat nahi padegi.”
+
+
+================== Contact API ==================
+Contact API ka use user ke contact details ko backend ke through database mein store aur manage karne ke liye kiya jata hai.
