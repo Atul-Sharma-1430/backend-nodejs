@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  deleteContactById,
   getAllContact,
   getContactByID,
   newContact,
@@ -31,5 +32,11 @@ router.get("/:id", getContactByID);
 // @api method : put
 // @api endPoint : /api/contact/id
 router.put("/:id", updateContactById);
+
+// delete contact by id
+// @api description : deleting contact by ids
+// @api method : delete
+// @api endPoint : /api/contact/id
+router.delete("/:id", deleteContactById);
 
 export default router;

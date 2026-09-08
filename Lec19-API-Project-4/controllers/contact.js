@@ -32,7 +32,7 @@ export const getAllContact = async (req, res) => {
   });
 };
 
-// ====================CREATING NEW CONTACT ====================
+// ==================== CREATING NEW CONTACT ====================
 export const newContact = async (req, res) => {
   const { name, email, phone, type } = req.body;
 
@@ -58,7 +58,7 @@ export const newContact = async (req, res) => {
   });
 };
 
-// ====================UPDATE BY ID ====================
+// ==================== UPDATE BY ID ====================
 export const updateContactById = async (req, res) => {
   const id = req.params.id;
   const { name, email, phone, type } = req.body;
@@ -76,7 +76,6 @@ export const updateContactById = async (req, res) => {
     { new: true },
   );
 
-  // agar daat exist nhi krta toh 
   if (!updatedContact) {
     return res.json({ message: "Contact Does not exist", success: false });
   }
@@ -84,6 +83,22 @@ export const updateContactById = async (req, res) => {
   res.json({
     message: "Contact Updated Successfully..!!",
     updatedContact,
+    success: true,
+  });
+};
+
+// ==================== DELETE BY ID ====================
+export const deleteContactById = async (req, res) => {
+  const id = req.params.id;
+
+  let deletedContact = await Contact.findByIdAndDelete(id);
+
+  if (!deletedContact) {
+    return res.json({ message: "Contact Does not exist", success: false });
+  }
+
+  res.json({
+    message: "Contact Deleted Successfully",
     success: true,
   });
 };
