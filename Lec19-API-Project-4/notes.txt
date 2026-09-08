@@ -35,3 +35,27 @@ JWT ek digital ID card jaisa hai jo server ko batata hai ki user successfully lo
 
 ================== Contact API ==================
 Contact API ka use user ke contact details ko backend ke through database mein store aur manage karne ke liye kiya jata hai.
+
+
+================== isAuthenticated Middleware working flow ==================
+Signup : isme pahle register krenge
+  ↓
+Login : jab login krenge tb waha response me ek token aayega 
+  ↓
+JWT Token milta hai
+  ↓
+Token ko Header mein bhejo: 1.vo token ko copy krne fir contact/new wale me jaake body me pahle data daalo 
+                            2. then header me jaake vo Auth middleware ka name and code paste kr do 
+                            3. fir uske baad verify krke aayega fir login ho jaayega
+
+Auth : <JWT Token>
+  ↓
+isAuthenticated Middleware
+  ↓
+Token Verify
+  ↓
+User Identify
+  ↓
+req.myUser
+  ↓
+Create / Update / Delete / Fetch Contact

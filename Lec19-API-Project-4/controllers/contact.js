@@ -49,6 +49,9 @@ export const newContact = async (req, res) => {
     email,
     phone,
     type,
+    // Logged-in user ki ID ko contact ke saath store kar rahe hain,
+    // taaki pata rahe ki ye contact kis user ka hai
+    user: req.myUser,
   });
 
   res.json({
