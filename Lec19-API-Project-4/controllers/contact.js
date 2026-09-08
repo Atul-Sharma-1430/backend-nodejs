@@ -57,3 +57,33 @@ export const newContact = async (req, res) => {
     success: true,
   });
 };
+
+// ====================UPDATE BY ID ====================
+export const updateContactById = async (req, res) => {
+  const id = req.params.id;
+  const { name, email, phone, type } = req.body;
+
+  // ye inbuilt method hai :- ye find and update dono krta hai
+  // ye id leta hai and then jo fields change krni hai vo and new:true basically ye krta hai ki kuch new data add krna hai toh vo bhi add kr skte hain
+  let updatedContact = await Contact.findByIdAndUpdate(
+    id,
+    {
+      name,
+      email,
+      phone,
+      type,
+    },
+    { new: true },
+  );
+
+  // agar daat exist nhi krta toh 
+  if (!updatedContact) {
+    return res.json({ message: "Contact Does not exist", success: false });
+  }
+
+  res.json({
+    message: "Contact Updated Successfully..!!",
+    updatedContact,
+    success: true,
+  });
+};

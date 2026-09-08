@@ -3,6 +3,7 @@ import {
   getAllContact,
   getContactByID,
   newContact,
+  updateContactById,
 } from "../controllers/contact.js";
 
 const router = express.Router();
@@ -24,5 +25,11 @@ router.get("/", getAllContact);
 // @api method : get
 // @api endPoint : /api/contact/id
 router.get("/:id", getContactByID);
+
+// update contact by id
+// @api description : updating contact by id
+// @api method : put
+// @api endPoint : /api/contact/id
+router.put("/:id", updateContactById);
 
 export default router;
